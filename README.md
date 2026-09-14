@@ -20,7 +20,7 @@ A small, deliberate web atelier for raw, single-origin Cretan honey — harveste
   - [Install & Run](#install--run)
 - [API Reference](#api-reference)
 - [Project Structure](#project-structure)
-- [Current State & Roadmap](#current-State-and-roadmapr)
+- [Current State & Roadmap](#current-state--roadmap)
 - [A Note From The Author](#a-note-from-the-author)
 
 ---
