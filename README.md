@@ -1,74 +1,54 @@
-<p align="center">
-  <img src="https://i.postimg.cc/Y0DL5Pqy/image.png)](https://postimg.cc/fSXbXBdx" width="1000" />
-</p>
+## FORMS
+# MELISSO (v1.0.0)
 
-<h1 align="center">
-  <span style="font-size: 4em; font-weight: 800; background: linear-gradient(135deg, #c9822b 0%, #895100 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-    MELISSO (1.0.0)
-  </span>
-</h1>
+A lightweight, artisanal web atelier and full-stack e-commerce engine for raw Cretan honey. Built with Flask and a custom Tailwind CSS frontend, focusing on zero-dependency builds, server-side session management, and editorial design UI.
 
-A small, deliberate web atelier for raw, single-origin Cretan honey — harvested in the White Mountains above the Aegean, unheated, unfiltered, and hand-sealed in beeswax. Browse the seasonal reserve, explore tasting notes and food pairings, and build a cart that remembers you across sessions. This is MELISSO.
+![MELISSO Banner](https://i.postimg.cc/Y0DL5Pqy/image.png)
 
 ---
 
 ## Table of Contents
-- [About](#about)
+- [Overview](#overview)
+- [Key Features](#key-features)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Install & Run](#install--run)
-- [API Reference](#api-reference)
-- [Project Structure](#project-structure)
+  - [Installation & Execution](#installation--execution)
+- [Project Architecture](#project-architecture)
 - [Current State & Roadmap](#current-state--roadmap)
-- [A Note From The Author](#a-note-from-the-author)
+- [Author's Note](#authors-note)
 
 ---
 
-## About
+## Overview
 
-MELISSO is a full-stack storefront for artisanal Cretan honey, built with Flask and a hand-crafted Tailwind frontend. It is intentionally narrow in scope: a landing atelier, a product catalog, an interactive cart with server-side session persistence, and a shipping engine that rewards larger orders.
+**MELISSO** is a targeted full-stack e-commerce application designed for an artisanal Cretan honey storefront. The project emphasizes clean code structure, rapid load times, and an editorial design philosophy without relying on complex JS bundlers or node_modules dependencies.
 
-The project pairs a warm editorial design system with a straightforward backend. No bundler, no build step, no node_modules — clone, install Flask, run.
+The system handles product showcases, tasting matchers, interactive server-persisted carts, and business logic for dynamic shipping calculation.
 
-Project repository: [MELISSO](#)
+---
+
+## Key Features
+
+- **Editorial E-Commerce Experience:** Landing page atelier featuring raw single-origin varietals, terroir storytelling, and scroll-reveal interactions.
+- **Interactive Cart & Session Persistence:** Dynamic server-side cart state management preserved across user sessions.
+- **Sommelier Tasting Matcher:** Interactive sensory matcher and food pairing guide with sensory slider parameters.
+- **Dynamic Shipping Engine:** Automated freight calculations with built-in free shipping thresholds (€80+).
+- **Accessibility & Motion Design:** Full responsive layout, reduced-motion media query support, and optimized typography pairings (*Bodoni Moda* & *Plus Jakarta Sans*).
 
 ---
 
 ## Tech Stack
 
-<details>
-<summary><b>Click to expand full tech stack</b></summary>
+### Core Technologies
+- **Backend:** Python 3.10+, Flask 3.0, Jinja2, Gunicorn
+- **Frontend:** HTML5, Tailwind CSS 3.x, Native JavaScript (ES6+)
+- **Design & Typography:** Material Symbols, Google Fonts (*Bodoni Moda*, *Plus Jakarta Sans*)
+- **VCS & DevOps:** Git, GitHub
 
-### **Backend**
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Flask-3.0-000000?style=for-the-badge&logo=flask&logoColor=white" />
-  <img src="https://img.shields.io/badge/Jinja2-✓-B41717?style=for-the-badge&logo=jinja&logoColor=white" />
-  <img src="https://img.shields.io/badge/Gunicorn-✓-499848?style=for-the-badge&logo=gunicorn&logoColor=white" />
-</p>
-
-### **Frontend**
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/Material_Symbols-✓-4285F4?style=for-the-badge&logo=google&logoColor=white" />
-</p>
-
-### **Design**
-<p align="center">
-  <img src="https://img.shields.io/badge/Bodoni_Moda-✓-1c1c19?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Plus_Jakarta_Sans-✓-1c1c19?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=googlefonts&logoColor=white" />
-</p>
-
-### **DevOps**
-<p align="center">
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-</p>
-</details>
+### Design Decisions
+- **Zero Build-Step:** Avoids Node.js dependency pipelines (`node_modules`) for lightweight deployment and simple maintainability.
+- **Server-Side Rendering:** Uses Jinja2 templates combined with dynamic client-side JS enhancements for reactive UI components.
 
 ---
 
@@ -76,65 +56,15 @@ Project repository: [MELISSO](#)
 
 ### Prerequisites
 
-| Tool | Version | Badge |
-|------|---------|-------|
-| Python | 3.10+ | ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python) |
-| Flask | 3.0+ | ![Flask](https://img.shields.io/badge/Flask-3.0+-000000?logo=flask) |
-| pip | any | ![pip](https://img.shields.io/badge/pip-✓-3776AB?logo=pypi) |
+| Component | Minimum Version | Requirement |
+|-----------|-----------------|-------------|
+| **Python**| `3.10+`         | Runtime environment |
+| **Flask** | `3.0+`          | Web framework |
+| **pip**   | Latest          | Package manager |
 
-### Install & Run
+### Installation & Execution
 
-1.  **Clone the repository:**
-    ```bash
-    git clone <your-repo-url>
-    cd melisso
-
----
-## Current State & Roadmap
-
-### What the site already does
-
-| Status | Feature |
-|:---:|---|
-| ![Done](https://img.shields.io/badge/%E2%9C%93-c9822b?style=flat-square) | Landing atelier with editorial hero section |
-| ![Done](https://img.shields.io/badge/%E2%9C%93-c9822b?style=flat-square) | Full seasonal catalog — six varietals and one tasting box |
-| ![Done](https://img.shields.io/badge/%E2%9C%93-c9822b?style=flat-square) | Interactive cart with server-side session persistence |
-| ![Done](https://img.shields.io/badge/%E2%9C%93-c9822b?style=flat-square) | Live quantity controls and subtotal recalculation |
-| ![Done](https://img.shields.io/badge/%E2%9C%93-c9822b?style=flat-square) | Shipping engine with free-freight threshold (€80) |
-| ![Done](https://img.shields.io/badge/%E2%9C%93-c9822b?style=flat-square) | Sommelier tasting matcher (interactive widget) |
-| ![Done](https://img.shields.io/badge/%E2%9C%93-c9822b?style=flat-square) | Food pairing guide with sensory sliders |
-| ![Done](https://img.shields.io/badge/%E2%9C%93-c9822b?style=flat-square) | Terroir narrative with scroll-reveal animations |
-| ![Done](https://img.shields.io/badge/%E2%9C%93-c9822b?style=flat-square) | Testimonials and community mosaic |
-| ![Done](https://img.shields.io/badge/%E2%9C%93-c9822b?style=flat-square) | Responsive layout for desktop and high-DPI displays |
-| ![Done](https://img.shields.io/badge/%E2%9C%93-c9822b?style=flat-square) | Reduced-motion support for accessibility |
-
-### What I want to build next
-
-| Status | Feature |
-|:---:|---|
-| ![Planned](https://img.shields.io/badge/%E2%97%8B-895100?style=flat-square) | Slide-over cart drawer (no page redirect) |
-| ![Planned](https://img.shields.io/badge/%E2%97%8B-895100?style=flat-square) | Shipping threshold gamification — progress bar to free freight |
-| ![Planned](https://img.shields.io/badge/%E2%97%8B-895100?style=flat-square) | Harvest Club tiered memberships (Connoisseur, Grand Cru, Atelier Patron) |
-| ![Planned](https://img.shields.io/badge/%E2%97%8B-895100?style=flat-square) | Multi-currency checkout (Stripe Elements, Apple Pay) |
-| ![Planned](https://img.shields.io/badge/%E2%97%8B-895100?style=flat-square) | Laboratory QR verification on jar labels |
-| ![Planned](https://img.shields.io/badge/%E2%97%8B-895100?style=flat-square) | Custom beeswax seal personalization |
-| ![Planned](https://img.shields.io/badge/%E2%97%8B-895100?style=flat-square) | `/api/subscribe` endpoint for private harvest drops |
-| ![Planned](https://img.shields.io/badge/%E2%97%8B-895100?style=flat-square) | `/api/products` with live batch counts |
-| ![Planned](https://img.shields.io/badge/%E2%97%8B-895100?style=flat-square) | `/api/checkout` for encrypted order orchestration |
-| ![Planned](https://img.shields.io/badge/%E2%97%8B-895100?style=flat-square) | B2B wholesale portal for Michelin-starred establishments |
-| ![Planned](https://img.shields.io/badge/%E2%97%8B-895100?style=flat-square) | Dark mode variant of the design system |
----
-## A Note From The Author
-
-I was away from GitHub for a long time. Not a short break — a real one. Life rearranged itself, work rearranged itself, and for a while the only thing I was doing with code was thinking about it. Ideas kept arriving anyway. Sketches of interfaces, notes about how a checkout should feel, half-formed plans. Most of it never made it to a file.
-
-This project is what happens when some of that finally lands.
-
-I came back with a clearer picture of what I wanted to build, and I started building it — slowly, deliberately, and with a fair amount of help from AI tools along the way. Some parts of the code in this repository were drafted with assistance from language models. The direction, the taste, and the decisions about what to keep and what to throw out are mine. But I would rather say plainly that this was made in collaboration with modern tooling than pretend it appeared fully formed.
-
-If you are reading this and you have also been away for a while: it is fine. The repositories will wait. The ideas will mostly wait too, and the ones that do not are not worth mourning. Start with what you remember. Ask for help. Ship something small :)
-
-I am back. Let us see what gets built.
-
----
-
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd melisso
