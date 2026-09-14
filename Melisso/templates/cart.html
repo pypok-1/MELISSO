@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Melisso · Your Cart</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>
+        @layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}}
+        ::-webkit-scrollbar{display:none;}
+        .cart-summary-sticky { position: sticky; top: 120px; }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#e5e2dd","primary-fixed":"#ffdcbc","surface-variant":"#e5e2dd","on-tertiary-fixed":"#261900","secondary-container":"#ff9568","surface-container-lowest":"#ffffff","secondary-fixed":"#ffdbce","error-container":"#ffdad6","on-secondary-fixed-variant":"#7b2f09","on-primary":"#ffffff","on-tertiary-fixed-variant":"#5d4200","on-tertiary-container":"#392800","on-error-container":"#93000a","secondary":"#994620","outline":"#857465","surface-tint":"#895100","inverse-primary":"#ffb86b","on-surface":"#1c1c19","surface-container":"#f0ede9","tertiary":"#7a5900","on-error":"#ffffff","inverse-on-surface":"#f3f0eb","background":"#fcf9f4","on-secondary":"#ffffff","primary-container":"#c9822b","error":"#ba1a1a","on-secondary-fixed":"#370e00","surface-container-high":"#ebe8e3","surface":"#fcf9f4","tertiary-fixed-dim":"#efc05e","secondary-fixed-dim":"#ffb598","tertiary-fixed":"#ffdea3","surface-dim":"#dcdad5","surface-container-low":"#f6f3ee","outline-variant":"#d7c3b1","inverse-surface":"#31302d","primary":"#895100","on-surface-variant":"#524437","on-secondary-container":"#762c06","on-background":"#1c1c19","surface-bright":"#fcf9f4","on-tertiary":"#ffffff","on-primary-fixed":"#2c1700","tertiary-container":"#b58b2e","on-primary-container":"#412400","on-primary-fixed-variant":"#683d00","primary-fixed-dim":"#ffb86b"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xs":"0.25rem","space-lg":"1.75rem","space-sm":"0.5rem","space-md":"1rem","gutter":"1.5rem","margin":"4rem","gutter-mobile":"1rem","space-xl":"3rem","margin-mobile":"1.25rem"},fontFamily:{"label-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"display":["Bodoni Moda"],"label-sm":["Plus Jakarta Sans"],"headline-sm":["Bodoni Moda"],"body-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"headline-md":["Bodoni Moda"],"title-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Bodoni Moda"]},fontSize:{"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"display":["64px",{"lineHeight":"72px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.12em","fontWeight":"700"}],"headline-sm":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"title-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["32px",{"lineHeight":"40px","fontWeight":"500"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.01em","fontWeight":"500"}]}}}}
+    </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md shadow-[0_1px_8px_rgba(137,81,0,0.04)]">
+    <div class="bg-surface-container-high py-space-xs px-gutter text-center">
+        <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">FRESH HARVEST OF CRETAN WILD THYME HONEY IS NOW AVAILABLE FOR ORDER • WORLDWIDE DELIVERY</p>
+    </div>
+    <div class="h-20 max-w-[1440px] mx-auto px-margin flex items-center justify-between gap-gutter">
+        <a href="/" class="flex items-center gap-space-md">
+            <img src="https://lh3.googleusercontent.com/aida/AEtjO1UANTF5MgufcebK41ATFOKQIIIV77ahfc8H6mmpYtea-b5ZOTugCTC1nSElU6t7--smCgtk6QjuzixTGfhyu1_AMswDwvF1fhootp3cpjWXPVmL2uFHMNTahHlHJfOblKtsECWB_MKVBM8LjXmVf2mRKN1e26sOjCKXb7o4upVslV9wvUx-4gZSgPoi3qrFEw2H1Sd-rntTRcm0EjlqeqhKRBbcjtl8uC5gFJnpqHSklUK6Emq_HAExJdK0" alt="Melisso Honey Logo" class="w-12 h-12 object-contain flex-shrink-0">
+            <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">Melisso</span>
+        </a>
+        <nav class="hidden lg:flex items-center gap-space-lg">
+            <a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="/">Terroir &amp; Heritage</a>
+            <a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="/#collection">Collections</a>
+            <a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Tasting Rituals</a>
+            <a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Harvest Subscription</a>
+        </nav>
+        <div class="flex items-center gap-space-md">
+            <button aria-label="Search" class="p-space-xs text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" type="button">
+                <span class="material-symbols-outlined text-[20px]">search</span>
+            </button>
+            <a href="{{ url_for('cart_page') }}" aria-label="Cart" class="relative p-space-xs text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+                {% if cart_count > 0 %}
+                <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-[9px] flex items-center justify-center leading-none">{{ cart_count }}</span>
+                {% endif %}
+            </a>
+            <div aria-label="Account" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="w-full pt-20 bg-background">
+    <div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-space-xl">
+
+        <!-- Breadcrumb & Title -->
+        <div class="mb-space-lg">
+            <div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider mb-space-sm">
+                <a href="/" class="hover:text-primary">Home</a>
+                <span class="material-symbols-outlined text-[12px]">chevron_right</span>
+                <span class="text-primary font-bold">Your Cart</span>
+            </div>
+            <h1 class="font-display text-display text-on-surface">Your selection</h1>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-space-xs">
+                Hand‑poured, numbered, and sealed with beeswax. Every jar carries the wild terroir of Lefka Ori.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+
+            <!-- LEFT: Cart items -->
+            <div class="lg:col-span-8 flex flex-col gap-space-md">
+                {% if items %}
+                    {% for item in items %}
+                    <div class="cart-item bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col sm:flex-row gap-space-md items-start sm:items-center"
+                         data-product-id="{{ item.id }}">
+                        <div class="w-full sm:w-24 h-24 flex-shrink-0 overflow-hidden rounded-lg bg-surface-container-low">
+                            <img src="{{ item.image }}" alt="{{ item.name }}" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1 flex flex-col sm:flex-row sm:items-center gap-space-sm w-full">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-space-xs mb-1">
+                                    <span class="font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded {{ item.badge_class }}">{{ item.badge }}</span>
+                                    <span class="font-label-sm text-label-sm text-on-surface-variant">{{ item.weight }}</span>
+                                </div>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface">{{ item.name }}</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">{{ item.desc }}</p>
+                                <p class="font-label-sm text-label-sm text-primary mt-1">€{{ '%.2f'|format(item.price) }}</p>
+                            </div>
+                            <div class="flex items-center gap-space-md self-end sm:self-center">
+                                <div class="flex items-center border border-outline-variant rounded-full bg-surface-container-lowest">
+                                    <button class="quantity-btn w-7 h-7 flex items-center justify-center text-on-surface-variant rounded-full hover:bg-primary hover:text-white transition-colors" data-action="decrease" type="button" aria-label="Decrease">−</button>
+                                    <span class="qty-value w-8 text-center font-label-lg text-label-lg text-on-surface">{{ item.qty }}</span>
+                                    <button class="quantity-btn w-7 h-7 flex items-center justify-center text-on-surface-variant rounded-full hover:bg-primary hover:text-white transition-colors" data-action="increase" type="button" aria-label="Increase">+</button>
+                                </div>
+                                <button class="cart-item-remove text-on-surface-variant hover:text-error transition-colors p-1" data-action="remove" type="button" aria-label="Remove">
+                                    <span class="material-symbols-outlined text-[20px]">delete</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <div class="bg-surface-container-low rounded-xl p-space-md flex flex-wrap items-center justify-between gap-space-sm mt-space-xs">
+                        <div class="flex items-center gap-space-sm">
+                            <span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">Complimentary shipping on orders over €{{ '%.0f'|format(free_shipping_threshold) }}.</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-space-sm">
+                        <a href="/#collection" class="inline-flex items-center gap-1 font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary transition-colors group">
+                            <span class="material-symbols-outlined text-[18px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+                            Continue shopping
+                        </a>
+                    </div>
+
+                {% else %}
+                    <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm text-center">
+                        <span class="material-symbols-outlined text-[48px] text-outline-variant">shopping_bag</span>
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-sm">Your cart is empty</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs mb-space-md">Discover our raw Cretan honey reserves.</p>
+                        <a href="/#collection" class="inline-flex items-center gap-2 px-space-lg py-space-sm bg-inverse-surface text-inverse-on-surface hover:bg-primary transition-colors font-label-lg text-label-lg uppercase rounded">
+                            Explore Collection
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+
+            <!-- RIGHT: Order Summary -->
+            <div class="lg:col-span-4 cart-summary-sticky">
+                <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+                    <h2 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Order summary</h2>
+
+                    <div class="space-y-space-sm border-b border-outline-variant/40 pb-space-md mb-space-md">
+                        <div class="flex justify-between font-body-md text-body-md">
+                            <span class="text-on-surface-variant">Subtotal</span>
+                            <span id="summary-subtotal" class="text-on-surface font-medium">€{{ '%.2f'|format(subtotal) }}</span>
+                        </div>
+                        <div class="flex justify-between font-body-md text-body-md">
+                            <span class="text-on-surface-variant">Shipping</span>
+                            <span id="summary-shipping" class="text-on-surface font-medium">
+                                {% if shipping == 0 %}Free{% else %}€{{ '%.2f'|format(shipping) }}{% endif %}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-baseline mb-space-lg">
+                        <span class="font-title-md text-title-md text-on-surface">Total</span>
+                        <span id="summary-total" class="font-headline-md text-headline-md text-primary">€{{ '%.2f'|format(total) }}</span>
+                    </div>
+
+                    <button class="w-full py-space-md bg-inverse-surface text-inverse-on-surface hover:bg-primary transition-colors duration-200 font-label-lg text-label-lg uppercase rounded flex items-center justify-center gap-2 mb-space-sm" type="button">
+                        <span class="material-symbols-outlined text-[18px]">lock</span>
+                        Proceed to checkout
+                    </button>
+
+                    <div class="flex flex-col gap-space-xs mt-space-md">
+                        <div class="flex items-center gap-space-xs text-on-surface-variant">
+                            <span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+                            <span class="font-label-sm text-label-sm uppercase">Secure payment · SSL encrypted</span>
+                        </div>
+                        <div class="flex items-center gap-space-xs text-on-surface-variant">
+                            <span class="material-symbols-outlined text-[16px] text-tertiary">eco</span>
+                            <span class="font-label-sm text-label-sm uppercase">Carbon‑neutral delivery</span>
+                        </div>
+                        <div class="flex items-center gap-space-xs text-on-surface-variant">
+                            <span class="material-symbols-outlined text-[16px] text-tertiary">local_shipping</span>
+                            <span class="font-label-sm text-label-sm uppercase">Worldwide shipping from Crete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommendations -->
+        {% if recommended %}
+        <div class="mt-space-xl pt-space-lg border-t border-outline-variant/30">
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Complete your ritual</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+                {% for rec in recommended %}
+                <div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col group">
+                    <div class="aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-space-xs">
+                        <img src="{{ rec.image }}" alt="{{ rec.name }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <span class="font-label-sm text-label-sm uppercase {{ rec.badge_class }}">{{ rec.badge }}</span>
+                    <p class="font-title-md text-title-md text-on-surface leading-tight">{{ rec.name }}</p>
+                    <p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">€{{ '%.2f'|format(rec.price) }}</p>
+                    <button class="add-to-cart mt-space-xs px-space-sm py-1 bg-inverse-surface text-inverse-on-surface hover:bg-primary transition-colors font-label-sm text-label-sm uppercase rounded"
+                            data-product-id="{{ rec.id }}" type="button">+ Add</button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</main>
+
+<footer class="w-full bg-surface-container-low mt-space-xl">
+    <div class="max-w-[1440px] mx-auto px-margin pt-space-xl pb-space-lg">
+        <div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+            <p>© 2025 Melisso Cretan Honey Atelier. All rights reserved.</p>
+            <div class="flex items-center gap-space-md">
+                <a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-on-surface transition-colors" href="#">Terms &amp; Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  async function postJSON(url, payload) {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    return res.json();
+  }
+
+  function updateSummary(data) {
+    const subEl = document.getElementById("summary-subtotal");
+    const shipEl = document.getElementById("summary-shipping");
+    const totEl = document.getElementById("summary-total");
+    if (subEl) subEl.textContent = "€" + data.subtotal.toFixed(2);
+    if (shipEl) shipEl.textContent = data.shipping === 0 ? "Free" : "€" + data.shipping.toFixed(2);
+    if (totEl) totEl.textContent = "€" + data.total.toFixed(2);
+
+    const badge = document.querySelector("header .bg-secondary");
+    if (badge) {
+      if (data.cart_count > 0) badge.textContent = data.cart_count;
+      else badge.remove();
+    }
+  }
+
+  document.querySelectorAll(".cart-item").forEach(itemEl => {
+    const pid = itemEl.dataset.productId;
+    const qtyEl = itemEl.querySelector(".qty-value");
+
+    itemEl.querySelectorAll("[data-action]").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const action = btn.dataset.action;
+        let qty = parseInt(qtyEl.textContent, 10);
+        if (action === "increase") qty += 1;
+        if (action === "decrease") qty = Math.max(0, qty - 1);
+        if (action === "remove") qty = 0;
+
+        const data = await postJSON("/api/cart/update", { product_id: pid, qty });
+        if (!data.ok) return;
+
+        if (qty === 0) {
+          itemEl.style.transition = "opacity .2s";
+          itemEl.style.opacity = "0";
+          setTimeout(() => itemEl.remove(), 200);
+        } else {
+          qtyEl.textContent = qty;
+        }
+        updateSummary(data);
+      });
+    });
+  });
+
+  document.querySelectorAll(".add-to-cart").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const pid = btn.dataset.productId;
+      const data = await postJSON("/api/cart/add", { product_id: pid, qty: 1 });
+      if (data.ok) {
+        btn.textContent = "✓ Added";
+        setTimeout(() => { btn.textContent = "+ Add"; }, 1200);
+        const badge = document.querySelector("header .bg-secondary");
+        if (badge) badge.textContent = data.cart_count;
+        else location.reload();
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
