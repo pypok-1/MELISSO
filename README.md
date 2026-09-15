@@ -61,9 +61,28 @@ The system handles product showcases, tasting matchers, interactive server-persi
 | **Flask** | `3.0+`          | Web framework |
 | **pip**   | Latest          | Package manager |
 
+
+melisso/
+├── templates/
+│   ├── index.html
+│   └── cart.html
+│
+└── static/
+│    └── js/
+│       ├── main.js
+│      └── cart.js
+├── app.py                                        
+├── requirements.txt
+├── melisso.db                   
+├─ models.py
+
 ### Installation & Execution
 
 1. **Clone the repository:**
    ```bash
    git clone <your-repo-url>
    cd melisso
+
+
+>Author's Note & Disclaimer
+ >Note: This repository is not a commercial or production product. It was created solely for practice, learning backend concepts (Flask routing, session state, dynamic logic), and exploring e-commerce design patterns.AI Assistance: Since my primary focus was on backend architecture and logic, the HTML layout and JavaScript code were generated with the assistance of AI due to limited frontend experience.
