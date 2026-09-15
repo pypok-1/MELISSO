@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Melisso · Your Cart</title>
+    <title>Melisso — Your Cart</title>
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
     <style>
         @layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}}
         ::-webkit-scrollbar{display:none;}
-        .cart-summary-sticky { position: sticky; top: 120px; }
+        @media (min-width: 1024px) { .cart-summary-sticky { position: sticky; top: 120px; } }
     </style>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
@@ -30,9 +30,9 @@
             <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">Melisso</span>
         </a>
         <nav class="hidden lg:flex items-center gap-space-lg">
-            <a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="/">Terroir &amp; Heritage</a>
+            <a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="/#terroir">Terroir &amp; Heritage</a>
             <a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="/#collection">Collections</a>
-            <a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Tasting Rituals</a>
+            <a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="/#flavors">Tasting Rituals</a>
             <a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Harvest Subscription</a>
         </nav>
         <div class="flex items-center gap-space-md">
@@ -55,7 +55,7 @@
 <main class="w-full pt-20 bg-background">
     <div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-space-xl">
 
-        <!-- Breadcrumb & Title -->
+        <!-- Breadcrumb -->
         <div class="mb-space-lg">
             <div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider mb-space-sm">
                 <a href="/" class="hover:text-primary">Home</a>
@@ -64,7 +64,7 @@
             </div>
             <h1 class="font-display text-display text-on-surface">Your selection</h1>
             <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-space-xs">
-                Hand‑poured, numbered, and sealed with beeswax. Every jar carries the wild terroir of Lefka Ori.
+                Hand-poured, numbered, and sealed with beeswax. Every jar carries the wild terroir of Lefka Ori.
             </p>
         </div>
 
@@ -91,9 +91,9 @@
                             </div>
                             <div class="flex items-center gap-space-md self-end sm:self-center">
                                 <div class="flex items-center border border-outline-variant rounded-full bg-surface-container-lowest">
-                                    <button class="quantity-btn w-7 h-7 flex items-center justify-center text-on-surface-variant rounded-full hover:bg-primary hover:text-white transition-colors" data-action="decrease" type="button" aria-label="Decrease">−</button>
+                                    <button class="quantity-btn w-7 h-7 flex items-center justify-center text-on-surface-variant rounded-full hover:bg-primary hover:text-white transition-colors" data-action="decrease" type="button">−</button>
                                     <span class="qty-value w-8 text-center font-label-lg text-label-lg text-on-surface">{{ item.qty }}</span>
-                                    <button class="quantity-btn w-7 h-7 flex items-center justify-center text-on-surface-variant rounded-full hover:bg-primary hover:text-white transition-colors" data-action="increase" type="button" aria-label="Increase">+</button>
+                                    <button class="quantity-btn w-7 h-7 flex items-center justify-center text-on-surface-variant rounded-full hover:bg-primary hover:text-white transition-colors" data-action="increase" type="button">+</button>
                                 </div>
                                 <button class="cart-item-remove text-on-surface-variant hover:text-error transition-colors p-1" data-action="remove" type="button" aria-label="Remove">
                                     <span class="material-symbols-outlined text-[20px]">delete</span>
@@ -130,7 +130,7 @@
                 {% endif %}
             </div>
 
-            <!-- RIGHT: Order Summary -->
+            <!-- RIGHT: Summary -->
             <div class="lg:col-span-4 cart-summary-sticky">
                 <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
                     <h2 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Order summary</h2>
@@ -165,7 +165,7 @@
                         </div>
                         <div class="flex items-center gap-space-xs text-on-surface-variant">
                             <span class="material-symbols-outlined text-[16px] text-tertiary">eco</span>
-                            <span class="font-label-sm text-label-sm uppercase">Carbon‑neutral delivery</span>
+                            <span class="font-label-sm text-label-sm uppercase">Carbon-neutral delivery</span>
                         </div>
                         <div class="flex items-center gap-space-xs text-on-surface-variant">
                             <span class="material-symbols-outlined text-[16px] text-tertiary">local_shipping</span>
@@ -176,7 +176,6 @@
             </div>
         </div>
 
-        <!-- Recommendations -->
         {% if recommended %}
         <div class="mt-space-xl pt-space-lg border-t border-outline-variant/30">
             <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Complete your ritual</h3>
@@ -196,7 +195,6 @@
             </div>
         </div>
         {% endif %}
-
     </div>
 </main>
 
