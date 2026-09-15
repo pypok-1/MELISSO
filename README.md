@@ -1,4 +1,3 @@
-## FORMS
 # MELISSO (v1.0.0)
 
 A lightweight, artisanal web atelier and full-stack e-commerce engine for raw Cretan honey. Built with Flask and a custom Tailwind CSS frontend, focusing on zero-dependency builds, server-side session management, and editorial design UI.
